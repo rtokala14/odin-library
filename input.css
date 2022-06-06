@@ -33,3 +33,21 @@ body {
 .icon {
     @apply w-7 hover:scale-110 cursor-pointer
 }
+
+.modal {
+    @apply fixed top-50% left-50% w-80 p-11 text-center rounded border-black border-2 transform -translate-x-1/2 -translate-y-1/2 scale-0 ease-in-out duration-200
+}
+
+.modal.active {
+    @apply transform -translate-x-50% -translate-y-50% scale-100
+}
+
+#overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    @apply fixed top-0 left-0 w-100% h-100%
+}
+
+#overlay.active {
+    display: block;
+}
