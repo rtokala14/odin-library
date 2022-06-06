@@ -7,7 +7,7 @@ body {
 }
 
 .card-container {
-    @apply grid grid-cols-3 p-8 mb-2
+    @apply grid grid-cols-3 p-8 mb-2 gap-4
 }
 
 .card {
@@ -18,8 +18,16 @@ body {
     @apply text-2xl font-bold 
 }
 
+.author {
+    @apply mb-9
+}
+
 .icons {
-    @apply flex justify-end
+    @apply flex justify-end gap-4 ml-5
+}
+
+.btn {
+    @apply flex gap-2 p-2 border-2 border-black rounded-lg
 }
 
 .icon {
