@@ -1,0 +1,21 @@
+{
+  "name": "odin-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "watch 'npm run build-css' ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtokala14/odin-library.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtokala14/odin-library/issues"
+  },
+  "homepage": "https://github.com/rtokala14/odin-library#readme"
+}
