@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-    min-height: 100vh;
-}
-
 .card-container {
-    @apply grid grid-cols-3 p-8 mb-2 gap-4
+    @apply grid grid-cols-4 p-8 mb-2 gap-4
 }
 
 .card {
-    @apply flex flex-col border-black border-2 rounded-xl p-3
+    @apply flex flex-col border-primary-dark shadow-md shadow-primary-light border-2 rounded-xl p-3 w-52
+}
+
+.card:hover {
+    @apply transform scale-105 ease-out duration-200
 }
 
 .title {
-    @apply text-2xl font-bold 
+    @apply text-3xl font-bold 
 }
 
 .author {
@@ -27,11 +27,15 @@ body {
 }
 
 .btn {
-    @apply flex gap-2 p-2 border-2 border-black rounded-lg
+    @apply flex gap-2 p-2 border-2 border-primary-dark rounded-lg
 }
 
-.btn.active {
-    @apply bg-slate-200
+.btn.active, .btn:focus {
+    @apply bg-primary-light text-primary-dark border-primary-dark
+}
+
+.btn:hover {
+    @apply transform scale-105 ease-out duration-100
 }
 
 .icon {
