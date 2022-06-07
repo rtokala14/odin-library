@@ -30,6 +30,10 @@ body {
     @apply flex gap-2 p-2 border-2 border-black rounded-lg
 }
 
+.btn.active {
+    @apply bg-slate-200
+}
+
 .icon {
     @apply w-7 hover:scale-110 cursor-pointer
 }

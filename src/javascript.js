@@ -23,7 +23,7 @@ bookForm.onsubmit = (e) => {
     e.preventDefault();
     const v1 = document.getElementById('input-title').value;
     const v2 = document.getElementById('input-author').value;
-    const v3 = document.getElementById('input-read').value;
+    const v3 = document.getElementById('input-read').checked;
     const newBook = new Book(v1, v2, v3);
     addBookToLibrary(newBook);
     closeModal();
@@ -32,7 +32,7 @@ bookForm.onsubmit = (e) => {
 function Book(name, author, read) {
     this.name = name;
     this.author = author;
-    this.read = (read == 'on') ? true : false;
+    this.read = read;
 }
 
 function addBookToLibrary(book) {
@@ -42,7 +42,7 @@ function addBookToLibrary(book) {
 
 function displayBooks() {
     container.textContent='';
-    myLibrary.forEach( (book) => {
+    myLibrary.forEach( (book, index) => {
         let card = document.createElement('div');
         card.classList.add('card');
         let title = document.createElement('h3');
@@ -57,6 +57,22 @@ function displayBooks() {
         icons.classList.add('icons');
         let rBtn = document.createElement('button');
         rBtn.classList.add('btn');
+        if (book.read) rBtn.classList.add('active');
+        rBtn.id = `btn-${index}`;
+        rBtn.addEventListener('click', (e) => {
+            if (e.target.classList.contains('active')) {
+                let id = e.target.id;
+                let index = Number(id.charAt(id.length - 1));
+                myLibrary[index].read = false;
+                e.target.classList.remove('active');
+            }
+            else {
+                let id = e.target.id;
+                let index = Number(id.charAt(id.length - 1));
+                myLibrary[index].read = true;
+                e.target.classList.add('active');
+            }
+        })
         rBtn.textContent = 'Read';
         icons.appendChild(rBtn);
         let dBtn = document.createElement('button');
