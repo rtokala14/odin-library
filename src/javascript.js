@@ -18,6 +18,7 @@ function closeModal() {
 }
 
 overlay.onclick = () => closeModal();
+document.onkeydown = () => closeModal();
 
 bookForm.onsubmit = (e) => {
     e.preventDefault();
