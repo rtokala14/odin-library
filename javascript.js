@@ -78,6 +78,13 @@ function displayBooks() {
         let dBtn = document.createElement('button');
         dBtn.classList.add('btn');
         dBtn.textContent = 'Remove';
+        dBtn.id = `dBtn-${index}`;
+        dBtn.addEventListener('click', (e) => {
+            let id = e.target.id;
+            let index = Number(id.charAt(id.length - 1));
+            myLibrary.splice(index, 1);
+            displayBooks();
+        })
         icons.appendChild(dBtn);
         card.appendChild(icons);
         container.appendChild(card);
