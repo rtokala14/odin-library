@@ -7,7 +7,7 @@
 }
 
 .card {
-    @apply flex flex-col border-primary-dark shadow-md shadow-primary-light border-2 rounded-xl p-3 w-52
+    @apply flex flex-col border-primary-dark shadow-md shadow-primary-light border-2 rounded-xl p-3
 }
 
 .card:hover {
@@ -19,7 +19,11 @@
 }
 
 .author {
-    @apply mb-9
+    @apply text-2xl
+}
+
+.pages {
+    @apply mb-9 
 }
 
 .icons {
@@ -43,7 +47,7 @@
 }
 
 .modal {
-    @apply fixed top-50% left-50% w-80 p-11 text-center rounded border-black border-2 transform -translate-x-1/2 -translate-y-1/2 scale-0 ease-in-out duration-200
+    @apply fixed top-50% left-50% w-80 p-11 text-center rounded-xl border-primary-dark border-2 transform -translate-x-1/2 -translate-y-1/2 scale-0 ease-in-out duration-200
 }
 
 .modal.active {

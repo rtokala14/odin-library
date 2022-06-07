@@ -27,15 +27,17 @@ bookForm.onsubmit = (e) => {
     const v1 = document.getElementById('input-title').value;
     const v2 = document.getElementById('input-author').value;
     const v3 = document.getElementById('input-read').checked;
-    const newBook = new Book(v1, v2, v3);
+    const v4 = document.getElementById('input-pages').value;
+    const newBook = new Book(v1, v2, v3, v4);
     addBookToLibrary(newBook);
     closeModal();
 }
 
-function Book(name, author, read) {
+function Book(name, author, read, pages) {
     this.name = name;
     this.author = author;
     this.read = read;
+    this.pages = pages;
 }
 
 function addBookToLibrary(book) {
@@ -56,6 +58,10 @@ function displayBooks() {
         author.classList.add('author');
         author.textContent = book.author;
         card.appendChild(author);
+        let pages = document.createElement('span');
+        pages.classList.add('pages');
+        pages.textContent = book.pages + ' pages';
+        card.appendChild(pages);
         let icons = document.createElement('div');
         icons.classList.add('icons');
         let rBtn = document.createElement('button');
