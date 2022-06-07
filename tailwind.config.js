@@ -5,6 +5,11 @@ module.exports = {
       spacing: {
         '50%': '50%',
         '100%': '100%',
+      },
+      colors: {
+        'primary-dark': '#006d77',
+        'secondary-dark': '#83c5be',
+        'primary-light': '#edf6f9',
       }
     },
   },

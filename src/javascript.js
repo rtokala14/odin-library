@@ -18,7 +18,9 @@ function closeModal() {
 }
 
 overlay.onclick = () => closeModal();
-document.onkeydown = () => closeModal();
+document.onkeydown = (e) => {
+    if (e.target.key == 'escape') closeModal();
+}
 
 bookForm.onsubmit = (e) => {
     e.preventDefault();
@@ -91,8 +93,3 @@ function displayBooks() {
         container.appendChild(card);
     })
 }
-
-/*window.onload = () => {
-    addBookToLibrary('Dune', 'Frank Herbert');
-    displayBooks();
-}*/
