@@ -31,11 +31,12 @@
     </div>
 
     <div id="overlay"></div>
-    <div class="modal bg-secondary-dark rounded-3xl" id="bookModal">
+    <div class="modal bg-secondary-dark" id="bookModal">
         <form id="addBookForm" class=" flex flex-col gap-2 items-center">
             <h3 class="font-medium text-2xl mb-8">Add New Book</h3>
-            <input type="text" class="input border-1 border-black rounded-lg p-1 " id="input-title" placeholder="Title" required maxlength="100">
-            <input type="text" class="input border-1 border-black rounded-lg p-1 " id="input-author" placeholder="Author" required maxlength="100">
+            <input type="text" class="input border-1 border-primary-dark rounded-lg p-1 " id="input-title" placeholder="Title" required maxlength="100">
+            <input type="text" class="input border-1 border-primary-dark rounded-lg p-1 " id="input-author" placeholder="Author" required maxlength="100">
+            <input type="number" class="input border-1 border-primary-dark rounded-lg p-1" id="input-pages" placeholder="0" required>
             <div class="flex gap-2 justify-center p-1 items-center">
                 <label for="input-read">Read the book?</label>
                 <input type="checkbox" class="input" id="input-read">
